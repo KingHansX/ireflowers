@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #98D8C1;
+  --color-secondary: #F8BBD0;
+  --color-accent: #FFD700;
+  --color-background: #FFFFFF;
+  --color-text: #333333;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-gray-800;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-cursive;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 bg-[#98D8C1] text-white rounded-full hover:bg-opacity-90 transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-2 bg-[#F8BBD0] text-white rounded-full hover:bg-opacity-90 transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#98D8C1];
+  }
+}
+
+/* Animaciones personalizadas */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para el tema oscuro */
+.dark {
+  --color-background: #1a1a1a;
+  --color-text: #ffffff;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+} 
