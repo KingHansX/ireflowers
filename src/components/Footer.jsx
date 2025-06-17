@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t dark:border-gray-800 text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Irene Flowers. Todos los derechos reservados. H._.ns</p>
+          <p>&copy; 2025 H._.ns. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

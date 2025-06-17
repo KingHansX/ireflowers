@@ -28,14 +28,15 @@ const Contact = () => {
   return (
     <div className="pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Encabezado */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-cursive mb-4">Contáctanos</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Estamos aquí para ayudarte a crear el arreglo floral perfecto para tu ocasión especial
+          <h1 className="text-4xl md:text-5xl font-cursive mb-4">Contacto</h1>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Estamos aquí para ayudarte a crear momentos especiales. Contáctanos para cualquier consulta o pedido personalizado.
           </p>
         </motion.div>
 
@@ -44,132 +45,113 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
             className="space-y-8"
           >
-            <div>
-              <h2 className="text-2xl font-cursive mb-6">Información de contacto</h2>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h2 className="text-2xl font-semibold mb-6">Información de Contacto</h2>
               <div className="space-y-6">
-                <div className="flex items-start">
-                  <MapPinIcon className="h-6 w-6 text-[#98D8C1] mt-1" />
-                  <div className="ml-4">
-                    <h3 className="font-semibold">Dirección</h3>
-                    <p className="text-gray-600">
-                      Calle Principal #123<br />
-                      Ciudad, Estado 12345
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
+                <div className="flex items-start gap-4">
                   <PhoneIcon className="h-6 w-6 text-[#98D8C1] mt-1" />
-                  <div className="ml-4">
+                  <div>
                     <h3 className="font-semibold">Teléfono</h3>
-                    <p className="text-gray-600">(123) 456-7890</p>
+                    <p className="text-gray-600 dark:text-gray-300">+593 99 903 0457</p>
                   </div>
                 </div>
-
-                <div className="flex items-start">
+                <div className="flex items-start gap-4">
                   <EnvelopeIcon className="h-6 w-6 text-[#98D8C1] mt-1" />
-                  <div className="ml-4">
+                  <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-600">info@ireneflowers.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">info@ireneflowers.com</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <MapPinIcon className="h-6 w-6 text-[#98D8C1] mt-1" />
+                  <div>
+                    <h3 className="font-semibold">Ubicación</h3>
+                    <p className="text-gray-600 dark:text-gray-300">18 de Septiembre y Versalles, Ecuador</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div>
-              <h2 className="text-2xl font-cursive mb-6">Horario de atención</h2>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h2 className="text-2xl font-semibold mb-6">Horario de Atención</h2>
               <div className="space-y-2">
-                <p className="text-gray-600">Lunes - Viernes: 9:00 AM - 6:00 PM</p>
-                <p className="text-gray-600">Sábado: 9:00 AM - 4:00 PM</p>
-                <p className="text-gray-600">Domingo: Cerrado</p>
+                <p className="text-gray-600 dark:text-gray-300">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                <p className="text-gray-600 dark:text-gray-300">Sábados: 9:00 AM - 2:00 PM</p>
+                <p className="text-gray-600 dark:text-gray-300">Domingos: Cerrado</p>
               </div>
             </div>
+          </motion.div>
 
-            {/* Mapa */}
-            <div className="h-64 rounded-lg overflow-hidden">
+          {/* Mapa y formulario */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+            className="space-y-8"
+          >
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076994379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sus!4v1586000412513!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.2823936654292!2d-79.8892221304096!3d-2.168073699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d8b3f4c3c3f%3A0x8c3c3c3c3c3c3c3c!2s18%20de%20Septiembre%20%26%20Versalles%2C%20Guayaquil%2C%20Ecuador!5e0!3m2!1ses!2sec!4v1718040000000!5m2!1ses!2sec"
                 width="100%"
-                height="100%"
+                height="300"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              />
+                className="w-full h-[300px]"
+              ></iframe>
             </div>
-          </motion.div>
 
-          {/* Formulario de contacto */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-          >
-            <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
-              <h2 className="text-2xl font-cursive mb-6">Envíanos un mensaje</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h2 className="text-2xl font-semibold mb-6">Envíanos un Mensaje</h2>
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Nombre completo
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Nombre
                   </label>
                   <input
                     type="text"
+                    id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     className="input-field"
-                    required
+                    placeholder="Tu nombre"
                   />
                 </div>
-
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Email
                   </label>
                   <input
                     type="email"
+                    id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     className="input-field"
-                    required
+                    placeholder="tu@email.com"
                   />
                 </div>
-
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Asunto
-                  </label>
-                  <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="input-field"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Mensaje
                   </label>
                   <textarea
+                    id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     rows="4"
                     className="input-field"
-                    required
-                  />
+                    placeholder="¿En qué podemos ayudarte?"
+                  ></textarea>
                 </div>
-
-                <button
-                  type="submit"
-                  className="btn-primary w-full"
-                >
-                  Enviar mensaje
+                <button type="submit" className="btn-primary w-full">
+                  Enviar Mensaje
                 </button>
               </form>
             </div>
