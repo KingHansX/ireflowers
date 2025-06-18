@@ -114,7 +114,7 @@ const categories = [
     id: 'bodas-eventos',
     name: 'Bodas y Eventos',
     description: 'Arreglos florales especiales para bodas y eventos importantes',
-    image: '/images/categories/bodas.jpg'
+    image: '/images/categories/bodas-eventos.jpg'
   },
   {
     id: 'cumpleanos',
